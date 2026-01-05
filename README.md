@@ -38,7 +38,7 @@ This application is currently available **only for Android** and is distributed 
 
 Download the latest APK from the link below:
 
-👉 **[Download Yournote APK](# [)](https://hrithikksham.github.io/yournoteappapk/)**  
+👉 **[Download Yournote APK](#https://hrithikksham.github.io/yournoteappapk/)**  
 
 ---
 
