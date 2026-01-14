@@ -24,7 +24,7 @@
       line-height: 1.6;
     }
 
-    /* --- NEW: Glassy Navigation Header --- */
+    /* --- Glassy Navigation Header --- */
     .glass-nav {
       position: fixed;
       top: 24px;
@@ -46,7 +46,7 @@
     }
 
     .nav-logo {
-      font-family: pixellari, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', sans-serif; /* Fixed font fallback */
       font-weight: 800;
       font-size: 1rem;
       color: #fff;
@@ -85,10 +85,10 @@
     }
 
     .nav-dl-btn:hover {
-      background: rgb(255, 255, 255);
+      background: rgb(230, 230, 230);
     }
 
-    /* --- ENHANCED: Starfield --- */
+    /* --- Starfield --- */
     .starfield {
       position: fixed;
       top: 0;
@@ -103,7 +103,6 @@
       position: absolute;
       background: white;
       border-radius: 50%;
-      /* Changed animation to be faster/more varied */
       animation: twinkle var(--duration) infinite alternate ease-in-out; 
       opacity: 0;
     }
@@ -125,14 +124,13 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 120px 20px 60px; /* Increased top padding for nav */
+      padding: 120px 20px 60px;
       background: none; 
     }
 
     .hero h1 {
       font-size: clamp(2.5rem, 6vw, 3.8rem);
       font-weight: 800;
-      /* Enhanced Gradient Text */
       background: linear-gradient(180deg, #ffffff 0%, #b4b4b4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -168,7 +166,7 @@
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
     }
 
-    /* Mobile Mockup Section */
+    /* Mockup Section */
     .mockup-section {
       display: flex;
       justify-content: center;
@@ -181,14 +179,12 @@
       position: relative;
     }
 
-    /* Enhanced Aurora */
     .aurora {
       position: absolute;
       width: 200px;
       height: 200px;
-      /* Brighter colors for better contrast */
       background: radial-gradient(circle at 20% 30%, #ff0099, #4900f5, transparent 80%);
-      filter: blur(40px); /* Increased blur */
+      filter: blur(40px);
       opacity: 0.6;
       animation: aurora-move 4s infinite alternate ease-in-out;
       z-index: 0;
@@ -208,7 +204,7 @@
       height: 560px;
       border-radius: 36px;
       background: #111111;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 0 2px #333; /* Enhanced shadow */
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 0 2px #333;
       padding: 10px;
       display: flex;
       justify-content: center;
@@ -238,7 +234,7 @@
     /* Features */
     .features {
       padding: 4rem 2rem 2rem;
-      background: rgba(10, 10, 10, 0.5); /* Slight transparency */
+      background: rgba(10, 10, 10, 0.5);
       backdrop-filter: blur(10px);
       color: #fff;
       text-align: center;
@@ -263,7 +259,6 @@
     .feature h3 {
       font-size: 1.5rem;
       margin-bottom: 0.8rem;
-      /* Enhanced Gradient Title */
       background: linear-gradient(90deg, #fff, #94a3b8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -354,26 +349,13 @@
   </nav>
 
   <div class="container">
+    
     <section class="hero">
       <div style="text-align: center;">
         <h1>Your Mind.<br /> 
             Your Space.<br />Yournote.</h1>
         <p><strong>Capture ideas, organize thoughts, and stay on top of life.</strong></p>
         <a href="app/yournote-v1.2.apk" class="cta-button">Download APK</a>
-    <div style="text-align: center;">
-    <h1>Your Mind.<br /> 
-        Your Space.<br />Yournote.</h1>
-    <p><strong>Capture ideas, organize thoughts, and stay on top of life.</strong></p>
-    <a href="app/yournote-v1.2.apk" class="cta-button">Download APK</a>
-    </div>
-</section>
-
-<section class="mockup-section">
-  <div class="phone-mockup">
-    <div class="aurora"></div>
-    <div class="phone">
-      <div class="phone-screen">
-        <img src="ui.png" alt="App UI" class="ui-image" />
       </div>
     </section>
 
@@ -415,8 +397,7 @@
       <div class="version-info">
        <span class="version-badge"><strong>v1.2.0</strong></span>
          <p>Built for <strong>Dreamers, Doers & Thinkers</strong></p>
-         <em class="update-date">Last updated: August 31 2025</em>
-         <em class="update-date">Last updated: 31st August 2025</em>
+         <em class="update-date">Last updated: August 31, 2025</em>
       </div>
 
       <p style="color: #666; font-size: 0.9rem;"><strong>Support:</strong> 📩 hrithiikksham@gmail.com</p>
@@ -428,26 +409,22 @@
     // Enhanced Starfield Generation
     function createStarfield() {
       const starfield = document.getElementById("starfield");
-      const numStars = 150; // More stars
+      const numStars = 150; 
 
       for (let i = 0; i < numStars; i++) {
         const star = document.createElement("div");
         star.className = "star";
         
-        // Random positions
         star.style.left = Math.random() * 100 + "%";
         star.style.top = Math.random() * 100 + "%";
         
-        // Random sizes (small, medium, large)
         const size = Math.random() * 2 + 1; 
         star.style.width = size + "px";
         star.style.height = size + "px";
 
-        // Random animation durations for realistic twinkling
-        const duration = Math.random() * 3 + 2; // Between 2s and 5s
+        const duration = Math.random() * 3 + 2; 
         star.style.setProperty('--duration', duration + 's');
         
-        // Random delay
         star.style.animationDelay = Math.random() * 5 + "s";
         
         starfield.appendChild(star);
